@@ -1,0 +1,37 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Inter:wght@400;500;600&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  /* RGB channels so Tailwind opacity modifiers work. Palette taken from the NOTTEVIA logo. */
+  --bg: 255 255 255;
+  --surface: 241 247 247;
+  --surface-2: 223 236 237;
+  --ink: 17 20 22;
+  --muted: 84 99 101;
+  --brand: 159 201 203; /* logo light teal */
+  --brand-dark: 106 165 168; /* logo dark teal */
+  --brand-deep: 41 98 102; /* accessible teal for text on white */
+  --line: rgba(17, 20, 22, 0.1);
+  --line-strong: rgba(17, 20, 22, 0.2);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
